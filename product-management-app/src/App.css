@@ -158,112 +158,76 @@ button.delete-button:active {
 }
 
 /* Pagination styles */
-.pagination-container {
+/* Product Table Wrapper */
+.product-table-wrapper {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  padding: 0 10px;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 800px;
+  overflow-x: auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.pagination {
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
   background-color: #f4f4f4;
   color: #333;
-  border: 1px solid #ccc;
-  margin: 0 5px;
-  padding: 8px 12px;
-  font-size: 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.pagination:hover {
-  background-color: #ddd;
-  transform: scale(1.05);
-}
-
-.pagination.active {
-  background-color: #61dafb;
-  color: white;
-  font-weight: bold;
-  border: none;
-}
-
-.pagination:disabled {
-  background-color: #f4f4f4;
-  cursor: not-allowed;
-  color: #aaa;
 }
 
 /* Pagination container */
 .pagination-container {
-  display: flex;
-  justify-content: center;  /* Membuat tombol berada di tengah */
   margin-top: 20px;
-  padding: 0 10px;        /* Optional: Menambahkan ruang di kiri dan kanan */
-}
-
-/* Pagination container yang berada di pojok kanan bawah */
-.pagination-container {
-  position: fixed;
-  bottom: 20px;  /* Jarak dari bawah */
-  right: 20px;   /* Jarak dari kanan */
   display: flex;
   justify-content: center;
-  padding: 0 10px; /* Optional: Memberikan sedikit ruang di kiri dan kanan */
-  z-index: 1000;   /* Agar tombol tetap di atas konten lain */
+  gap: 5px;
 }
 
-/* Tombol Pagination */
 button.pagination {
-  background-color: #f4f4f4;
-  color: #333;
-  border: 1px solid #ccc;
-  margin: 0 5px;
-  padding: 8px 12px;  /* Mengurangi padding */
-  font-size: 14px;    /* Mengurangi ukuran font */
-  border-radius: 8px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background-color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease;
 }
 
-/* Hover effect for pagination buttons */
-button.pagination:hover {
-  background-color: #ddd;
-  transform: scale(1.05);  /* Menurunkan efek skala */
-}
-
-/* Active state for pagination */
 button.pagination.active {
-  background-color: #61dafb;
+  background-color: #007bff;
   color: white;
   font-weight: bold;
-  border: none;
 }
 
-/* Disabled state for pagination buttons */
 button.pagination:disabled {
   background-color: #f4f4f4;
   cursor: not-allowed;
-  color: #aaa;
 }
 
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+.input-error {
+  border: 2px solid red; /* Membuat border merah pada input yang salah */
 }
 
-th, td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: left;
+.error-message {
+  color: red; /* Warna teks pesan kesalahan merah */
+  font-size: 12px;
+  margin-top: 5px;
 }
 
-th {
-  background-color: #f4f4f4;
-}
 
 @keyframes App-logo-spin {
   from {
